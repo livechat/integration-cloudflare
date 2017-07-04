@@ -1,0 +1,13 @@
+{
+  "name": "LiveChat",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivechat/integration-cloudflare.git"
+  },
+  "author": "Łukasz Powązka, l.powazka@livechatinc.com",
+  "license": "MIT",
+  "homepage": "https://www.livechatinc.com/"
+}
