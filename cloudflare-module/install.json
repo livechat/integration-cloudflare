@@ -1,0 +1,40 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./source/tracking-code.js"
+      }
+    ]
+  },
+  "hooks": [
+    {
+      "endpoint": "https://www.livechatinc.com/cloudflare/validate",
+      "events": ["option-change:account"],
+      "authenticate": ["account"],
+      "block": true,
+      "failure": {
+        "action": "notify",
+        "message": "There was an error communicating with LiveChat SSO."
+      }
+    }
+  ],
+  "options": {
+    "properties": {
+      "account": {
+        "order": 0,
+        "title": "LiveChat Account",
+        "type": "object",
+        "format": "account",
+        "services": ["livechat"]
+      }
+      ,"licenseID": {
+        "order": 1,
+        "type": "number",
+        "title": "License Number:",
+        "description": "Log in to LiveChat in another tab, go to the <a href=\"https://my.livechatinc.com/settings/code\" target=\"_blank\">Code section</a> and copy the license number.",
+        "value": ""
+      }
+    }
+  }
+}
